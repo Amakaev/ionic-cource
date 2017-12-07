@@ -11,6 +11,9 @@ import {SplashScreen} from '@ionic-native/splash-screen';
 import {ApiProvider} from '../providers/api/api';
 import {EventsProvider} from '../providers/events/events.provider';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {EventDetailsPage} from "../pages/event-details/event-details";
+import {EventHomePage} from "../pages/event-home/event-home";
+import {EventRelatedEventsPage} from "../pages/event-related-events/event-related-events";
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     HomePage,
     PeoplePage,
     OrganizationsPage,
-    EventsPage
+    EventsPage,
+    EventDetailsPage,
+    EventHomePage,
+    EventRelatedEventsPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +38,10 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     HomePage,
     EventsPage,
     PeoplePage,
-    OrganizationsPage
+    OrganizationsPage,
+    EventDetailsPage,
+    EventHomePage,
+    EventRelatedEventsPage
   ],
   providers: [
     StatusBar,
@@ -40,7 +49,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ApiProvider,
     EventsProvider,
-    HttpClient
+    HttpClient,
   ]
 })
 export class AppModule {
